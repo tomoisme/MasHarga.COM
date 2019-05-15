@@ -1,5 +1,5 @@
 ---
-title: "Harga Dan Spesifikasi iPhone 6/6s Bekas Refurbished Terbaru"
+title: "Harga Dan Spesifikasi iPhone 5s Bekas Refurbished Terbaru"
 date: 2019-05-15T14:26:05+07:00
 draft: false
 layout: "single"
@@ -8,7 +8,8 @@ descripton: "Info harga iPhone bekas dan refurbished terbaru."
 images: ["/img/iphone-5s-bekas-tokopedia.jpg"]
 fimage: "/img/iphone-5s-bekas-tokopedia.jpg"
 category: [
-    handphone
+    "Handphone",
+    "Smartphone"
 ]
 tag: [
     iphone bekas,

@@ -4,8 +4,9 @@
     <div class="col-md-12 col-sm-12">
         <p>
                 {{ $siteurl := .Site.BaseURL }}
+                <small>kategori:</small> 
                 {{ range .Params.category }}
-                <small>kategori: <a href="{{ $siteurl }}category/{{ . | urlize }}">{{ . }}</a></small>
+                <small><a href="{{ $siteurl }}category/{{ . | urlize }}">{{ . }}</a></small>, 
                 {{ end }}                
                 <small> | tgl: {{.Date.Format "02 Jan 2006"}}</small>
         </p>        
