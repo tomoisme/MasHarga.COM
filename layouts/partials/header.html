@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="description" content="{{ .Description }}">
+	<meta property="fb:app_id" content="953761788043583" />
+	{{ template "_internal/opengraph.html" . }}
+	
+	<title>{{ .Title }}</title>
+
+	<!-- Bootstrap core CSS -->
+	<link href="{{ .Site.BaseURL }}css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+	<nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+		<div class="container">
+			<a class="navbar-brand" href="{{ .Site.BaseURL }}">MasHarga.COM</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mainNav"
+			 aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+
+			<div class="collapse navbar-collapse" id="mainNav">
+				<ul class="navbar-nav mr-auto">
+					<li class="nav-item">
+						<a class="nav-link" href="#">Info</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">Tips</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">Inspirasi</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+
+	</nav>
+
+	<div style="height: 80px; clear: both"></div>

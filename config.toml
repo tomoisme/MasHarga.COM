@@ -1,0 +1,23 @@
+baseURL = "https://masharga.com/"
+languageCode = "en-us"
+title = "Info Harga Paling Update Dan Review Produk Populer"
+description = "Mengulas informasi harga dan review atau kesan pengguna terhadap barang yang populer. Membantu anda memutuskan produk terbaik untuk dibeli."
+disableKinds = "RSS"
+paginate = 10
+
+[related]
+threshold = 80.0
+includeNewer = false
+toLower = false
+
+  [[related.indices]]
+  name = "tag"
+  weight = 100.0
+
+  [[related.indices]]
+  name = "date"
+  weight = 10.0
+
+[taxonomies]
+  category = "category"
+  tag = "tag"
