@@ -1,40 +1,46 @@
 {{ partial "header" . }}
 
-<div class="container">
-    <div class="col-md-12 col-sm-12">
-        <p>
-                {{ $siteurl := .Site.BaseURL }}
-                <small>kategori:</small> 
-                {{ range .Params.category }}
-                <small><a href="{{ $siteurl }}category/{{ . | urlize }}">{{ . }}</a></small>, 
-                {{ end }}                
-                <small> | tgl: {{.Date.Format "02 Jan 2006"}}</small>
-        </p>        
-        <div style="clear:both; height: 10px;"></div>
-        {{ .Content }}
-        <hr>
-        
-        {{ partial "fb-comments" . }}
+<body>
+    <section class="section">
+        <div class="container">
+            <div class="column">
+                <div class="content">
+                    <p>
+                        {{ $siteurl := .Site.BaseURL }}
+                        <small>kategori:</small>
+                        {{ range .Params.category }}
+                        <small><a href="{{ $siteurl }}category/{{ . | urlize }}">{{ . }}</a></small>,
+                        {{ end }}
+                        <small> | tgl: {{.Date.Format "02 Jan 2006"}}</small>
+                    </p>
+                    <div style="clear:both; height: 10px;"></div>
+                    {{ .Content }}
+                    <hr>
 
-        {{ $related := .Site.RegularPages.Related . | first 10 }}
-        {{ with $related }}
-        <hr>
-        <h3>Artikel Yang Berkaitan</h3>
-        <ul>
-            {{ range . }}
-            <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
-            {{ end }}
-        </ul>
-        {{ end }}
-        <hr>
-        <p>
-            Tagar:
-            {{ $siteurl := .Site.BaseURL }}
-            {{ range .Params.tag }}
-            #<a href="{{ $siteurl }}tag/{{ . | urlize }}">{{ . }}</a>
-            {{ end }}
-        </p>
-    </div>
-</div>
+                    {{ partial "fb-comments" . }}
+
+                    {{ $related := .Site.RegularPages.Related . | first 10 }}
+                    {{ with $related }}
+                    <hr>
+                    <h3>Artikel Yang Berkaitan</h3>
+                    <ul>
+                        {{ range . }}
+                        <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+                        {{ end }}
+                    </ul>
+                    {{ end }}
+                    <hr>
+                    <p>
+                        Tagar:
+                        {{ $siteurl := .Site.BaseURL }}
+                        {{ range .Params.tag }}
+                        #<a href="{{ $siteurl }}tag/{{ . | urlize }}">{{ . }}</a>
+                        {{ end }}
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
 
 {{ partial "footer" . }}
